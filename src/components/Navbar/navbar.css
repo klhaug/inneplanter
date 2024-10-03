@@ -36,12 +36,15 @@ h3 {
     margin: 0;
 }
 
+
+
 .nav-right-container{
     display: flex;
     gap: 48px;
 
 }
 .nav-right-container > :last-child{
+    font-family: Raleway;
     display: flex;
     align-items: center;
     background-color: white;
@@ -55,6 +58,7 @@ h3 {
     cursor: pointer;
 }
 .nav-right-container > :first-child{
+    font-family: Raleway;
     display: flex;
     align-items: center;
     font-size: 16px;
