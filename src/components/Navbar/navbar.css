@@ -1,0 +1,65 @@
+.navbar-container {
+    background-color: #2E4D42;
+    margin: auto;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 90px;
+    max-width: 1440px;
+}
+
+li {
+    list-style: none;
+    color: white;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container > :last-child {
+    text-decoration: none;
+    color: white;
+    font-size: 24px ;
+    font-family: Montserrat;
+    font-weight: 400;
+    letter-spacing: -1px;
+    cursor: pointer;
+}
+
+h3 {
+    color: white;
+    margin: 0;
+}
+
+.nav-right-container{
+    display: flex;
+    gap: 48px;
+
+}
+.nav-right-container > :last-child{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    color: #2E4D42;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 6px;
+    font-weight: 600;
+    padding: 0 21px;
+    height: 44px;
+    cursor: pointer;
+}
+.nav-right-container > :first-child{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    height: 44px;
+    cursor: pointer;
+}
