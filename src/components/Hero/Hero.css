@@ -1,0 +1,39 @@
+.hero-wrapper {
+    display: flex;
+    background-color: #2E4D42;
+    height: 850px;
+}
+
+h1 {
+    max-width: 380px;
+    font-size: 40px;
+    margin: 20 0;
+    color: white;
+    font-family: Raleway;
+    font-weight: 700;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 0 90px;
+    gap: 63px;
+}
+
+.hero-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.hero-image {
+    height: 497px;
+}
+
+.img-crop {
+    width: 400px;
+    border-radius: 6px;
+    overflow: hidden;
+}

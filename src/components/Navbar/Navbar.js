@@ -10,8 +10,8 @@ function Navbar() {
                         <a href='#hjem'>Inneplanter</a>
                     </div>
                     <ul className="nav-right-container">
-                        <li>Hjem</li>
-                        <li>Planter</li>
+                        <li><a href="#hjem">Hjem</a></li>
+                        <li><a href="#planter">Planter</a></li>
                     </ul>
                 </nav>
             </div>
