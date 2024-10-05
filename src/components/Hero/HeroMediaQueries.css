@@ -15,6 +15,7 @@
     }
 
     .img-crop {
+        max-width: 380px;
         margin-top: -31px;
     }
 }
@@ -44,15 +45,14 @@
     }
 
     .hero-wrapper {
-        height: 720px;
+        height: 800px;
     }
 
     .hero-text-container {
         max-width: 350px;
     }
     .img-crop {
-        width: 350px;
-        height: 362px;
+        max-width: 350px ;
     }
 } 
     
@@ -63,16 +63,26 @@
     }
 
     .hero-wrapper {
-        height: 600px;
+        height: 800px;
     }
 
     
     .hero-text-container {
-        max-width: 280px;
+        max-width: 350px;
     }
     .img-crop {
         margin-top: -51px;
-        width: 280px;
-        height: 280px;
+        max-width: 350px;
+    }
+} 
+
+@media screen and (max-width: 375px) {
+    .hero-text-container {
+        max-width: 335px;
+    }
+
+    .img-crop {
+        max-width: 335px;
+    
     }
 } 

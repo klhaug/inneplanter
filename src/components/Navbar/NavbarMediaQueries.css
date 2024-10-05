@@ -47,14 +47,14 @@
 /* iPhone 12 Pro */
 @media screen and (max-width: 390px){
     .navbar {
-        padding: 0 55px;
+        padding: 0 20px;
     }
 }
 
 /* iPhone SE */
 @media screen and (max-width: 375px){
     .navbar {
-        padding: 0 47.5px;
+        padding: 0 20px;
     }
 }
 
