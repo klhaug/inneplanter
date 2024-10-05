@@ -5,9 +5,10 @@
 }
 
 h1 {
+    box-sizing: border-box;
     max-width: 380px;
     font-size: 40px;
-    margin: 20 0;
+    margin: 20px 0px;
     color: white;
     font-family: Raleway;
     font-weight: 700;
@@ -36,4 +37,67 @@ h1 {
     width: 400px;
     border-radius: 6px;
     overflow: hidden;
+}
+
+.hero-search{
+    font-family: Raleway;
+    height: 44px;
+    padding: 0 24px;
+    margin-top: 20px;
+    margin-bottom: 6px;
+    border-radius: 6px;
+    font-size: 19px;
+    border: 0px;
+    outline: none; 
+}
+
+.hero-button-container {
+    display: flex;
+    gap: 12px;
+}
+
+.hero-add-button {
+    display: flex;
+    align-items: center;
+    font-family: Raleway;
+    font-size: 19px;
+    font-weight: 700;
+    margin-top: 6px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 6px;
+    height: 44px;
+    padding: 0 24px ;
+    cursor: pointer;
+}
+
+
+.hero-add-button:hover{
+    background-color: #F0f0f0;
+    color: black;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.304);
+    border: 1px solid black;
+    
+}
+.hero-database-button{
+    display: flex;
+    align-items: center;
+    font-family: Raleway;
+    color: white;
+    font-size: 19px;
+    font-weight: 700;
+    margin-top: 6px;
+    background-color: #2E4D42 ;
+    border: 1px solid white;
+    border-radius: 6px;
+    height: 44px;
+    padding: 0 24px ;
+    cursor: pointer;
+}
+
+.hero-database-button:hover{
+    background-color: white;
+    color: #2E4D42;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.304);
+    border: 1px solid black;
 }
