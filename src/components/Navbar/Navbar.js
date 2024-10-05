@@ -1,5 +1,6 @@
 import React from "react";
 import "./navbar.css";
+import './NavbarMediaQueries.css'
 
 function Navbar() {
     return(

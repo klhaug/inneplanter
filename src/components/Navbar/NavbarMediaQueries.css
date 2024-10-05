@@ -1,0 +1,17 @@
+@media screen and (max-width: 585px){
+    .navbar {
+        padding: 0 45px;
+    }
+}
+
+@media screen and (max-width: 490px){
+    .navbar {
+        padding: 0 20px;
+        height: 76px; /* MIDLERTIDIG, FJERN NÅR DU FÅR INN HAMBURGER */
+    }
+
+    .nav-right-container {
+        display: none;
+    }
+}
+

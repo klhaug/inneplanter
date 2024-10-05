@@ -1,5 +1,6 @@
 import React from "react";
 import './Hero.css'
+import './HeroMediaQueries.css'
 
 
 function Hero () {

@@ -48,6 +48,7 @@ h3 {
 
 }
 .nav-right-container > :last-child{
+    box-sizing: border-box;
     font-family: Raleway;
     display: flex;
     align-items: center;
