@@ -18,7 +18,7 @@ function Hero () {
                     </div>
                 </div>
                 <div className="img-crop">
-                    <img className="hero-image" src="/assets/img1.webp" alt="illustration of a woman watering her flowers"/>
+                    <img className="hero-image" src={`${process.env.PUBLIC_URL}/assets/img1.webp`} alt="illustration of a woman watering her flowers" />
                 </div>
             </div>
         </div>
