@@ -44,7 +44,8 @@ h3 {
 
 .nav-right-container{
     display: flex;
-    gap: 48px;
+    justify-content: space-between;
+    min-width: 184px;
 
 }
 .nav-right-container > :last-child{
@@ -62,6 +63,13 @@ h3 {
     height: 44px;
     cursor: pointer;
 }
+
+.nav-right-container > :last-child:hover{ 
+    background-color: #46724F;
+    font-weight: 700;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.304);
+    color: white;
+}
 .nav-right-container > :first-child{
     font-family: Raleway;
     display: flex;
@@ -71,5 +79,9 @@ h3 {
     font-weight: 600;
     height: 44px;
     cursor: pointer;
+}
+
+.nav-right-container > :first-child:hover {
+    font-weight: 700;
 }
 
