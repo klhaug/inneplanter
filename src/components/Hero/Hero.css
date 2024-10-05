@@ -39,6 +39,11 @@ h1 {
     overflow: hidden;
 }
 
+.search-and-button-container {
+    display: flex;
+    flex-direction: column;
+}
+
 .hero-search{
     font-family: Raleway;
     height: 44px;
@@ -57,14 +62,15 @@ h1 {
 }
 
 .hero-add-button {
-    display: flex;
+    flex: 1;
+    box-sizing: border-box;
     align-items: center;
     font-family: Raleway;
     font-size: 19px;
     font-weight: 700;
     margin-top: 6px;
     background-color: white;
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 6px;
     height: 44px;
     padding: 0 24px ;
@@ -73,15 +79,16 @@ h1 {
 
 
 .hero-add-button:hover{
-    background-color: #F0f0f0;
-    color: black;
+    font-weight: 700;
+    background-color: #46724F ;
+    color: white;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.304);
     border: 1px solid black;
     
 }
 .hero-database-button{
-    display: flex;
-    align-items: center;
+    flex: 1;
+    box-sizing: border-box;
     font-family: Raleway;
     color: white;
     font-size: 19px;

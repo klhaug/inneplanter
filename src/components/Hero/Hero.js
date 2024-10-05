@@ -8,10 +8,12 @@ function Hero () {
             <div className="hero-container">
                 <div className="hero-text-container"> 
                     <h1>Del din planteglede med andre</h1>
-                    <input className="hero-search" placeholder="Søk etter plante" type="search"/>
-                    <div className="hero-button-container">
-                        <button className="hero-add-button">Legg til</button>
-                        <button className="hero-database-button">Se alle</button>
+                    <div className="search-and-button-container">
+                        <input className="hero-search" placeholder="Søk etter plante" type="search"/>
+                        <div className="hero-button-container">
+                            <button className="hero-add-button">Legg til</button>
+                            <button className="hero-database-button">Se alle</button>
+                        </div>
                     </div>
                 </div>
                 <div className="img-crop">
