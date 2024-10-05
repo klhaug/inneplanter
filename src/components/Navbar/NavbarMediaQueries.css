@@ -10,8 +10,65 @@
         height: 76px; /* MIDLERTIDIG, FJERN NÅR DU FÅR INN HAMBURGER */
     }
 
-    .nav-right-container {
+    .nav-right-container > :last-child{
         display: none;
+    }
+
+    .nav-right-container {
+        justify-content: end;
+        min-width: 50px;
     }
 }
 
+/* iPhone 14 Pro Max */
+@media screen and (max-width: 430px){
+    .navbar {
+        padding: 0 40px;
+    }
+}
+
+
+
+/* iPhone XR */
+@media screen and (max-width: 414px){
+    .navbar {
+        padding: 0 32px;
+    }
+}
+
+/* Pixel 7 */
+@media screen and (max-width: 412px){
+    .navbar {
+        padding: 0 31px;
+    }
+}
+
+
+/* iPhone 12 Pro */
+@media screen and (max-width: 390px){
+    .navbar {
+        padding: 0 55px;
+    }
+}
+
+/* iPhone SE */
+@media screen and (max-width: 375px){
+    .navbar {
+        padding: 0 47.5px;
+    }
+}
+
+/* Samsung Galaxy S8+ */
+@media screen and (max-width: 360px){
+    .navbar {
+        padding: 0 40px;
+    }
+}
+
+/* Galaxy Z Fold */
+
+@media screen and (max-width: 344px){
+    .navbar {
+        padding: 0 32px;
+    }
+}
