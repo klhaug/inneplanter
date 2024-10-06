@@ -2,12 +2,9 @@
 import './App.css';
 import Navbar from '../../components/Navbar/Navbar';
 import Hero from '../../components/Hero/Hero';
+import Section2 from '../../components/Section2/Section2';
 
 function App() {
- 
-console.log('PUBLIC_URL:', process.env.PUBLIC_URL)
-
-
 
   return (
     <div className="App">
@@ -15,6 +12,7 @@ console.log('PUBLIC_URL:', process.env.PUBLIC_URL)
        <Navbar />
       </header>
       <Hero />
+      <Section2 />
     </div>
   );
 }
