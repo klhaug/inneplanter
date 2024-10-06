@@ -3,11 +3,11 @@ import './Section2.css'
 
 function Section2() {
     return (
-        <div id="section 2">
-            <div>
-                <div>
+        <div className="section2">
+            <div className="s2-content-wrapper">
+                <div className="s2-content-container">
                     <div className="s2-img-container">
-                        <img className="s2-image" src={`${process.env.PUBLIC_URL}/assets/img2.webp`} alt="illustration of a woman watering her flowers" />
+                        <img className="s2-image" src={`${process.env.PUBLIC_URL}/assets/img2.webp`} alt="illustration of a man watering her flowers" />
                     </div>
                     <div className="s2-text-container">
                         <h2>Grønnere sammen – bli med i vårt plantefellesskap!</h2>

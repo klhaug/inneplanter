@@ -1,3 +1,30 @@
-.section2-header {
-    color: black;
+.section2 {
+}
+
+
+.s2-content-wrapper {
+    height: 1080px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 90px;
+
+}
+
+.s2-content-container {
+    display: flex;
+    gap: 108px
+}
+
+.s2-image {
+    border-radius: 6px;
+    max-width: 429px;
+    max-height: 445px;
+}
+
+.s2-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 502px;
 }
