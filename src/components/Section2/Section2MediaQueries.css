@@ -1,0 +1,41 @@
+@media screen and (max-width: 1150px){
+    .s2-content-container {
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .s2-img-container {
+        order: 2;
+        height: 502px;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 542px) {
+    .s2-content-wrapper {
+        align-items: start;
+        margin-top: 62px;
+        height: 900px;
+    }
+    .s2-button-container > :last-child {
+        margin-top: 10px;
+
+    }
+    p {
+        margin: 28px 0;
+    }
+
+    .s2-img-container {
+        height: 380px;
+        margin-top: -22px;
+    }
+}
+@media screen and (max-width: 440px) {
+
+    h2 {
+        font-size: 32px;
+    }
+    .s2-img-container {
+        height: 350px;
+    }
+}

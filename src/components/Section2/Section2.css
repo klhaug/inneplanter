@@ -13,13 +13,21 @@
 
 .s2-content-container {
     display: flex;
-    gap: 108px
+    width: 1040px;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
+
+.s2-img-container {
+    margin-right: 40px;
+    height: 429px;
+    aspect-ratio: 1/1;
+}
 .s2-image {
     border-radius: 6px;
-    max-width: 429px;
-    max-height: 445px;
+    height: 100%;
+
 }
 
 .s2-text-container {
@@ -27,4 +35,67 @@
     flex-direction: column;
     justify-content: center;
     max-width: 502px;
+}
+
+h2 {
+    font-size: 40px ;
+    box-sizing: border-box;
+    margin: 10px 0px;
+    color: black;
+    font-family: Raleway;
+    font-weight: 700;
+}
+
+p {
+    font-family: Raleway;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.2px;
+}
+
+.s2-button-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.s2-button-container > :last-child {
+    display: flex;
+    height: 44px;
+    align-items: center;
+    font-family: Raleway;
+    font-size: 16px;
+    text-decoration: underline;
+    transition: all 0.2s ease-in-out;
+}
+
+.s2-button-container > :last-child:hover {
+    font-size: 15.75px;
+    transition: all 0.2s ease-in-out;
+    font-weight: 500;
+}
+
+.s2-registrer-button {
+    margin-right: 28px;
+    color: white;
+    align-items: center;
+    font-family: Raleway;
+    font-size: 19px;
+    font-weight: 700;
+    background-color: #2E4D42;
+    border: 1px solid #2E4D42;
+    border-radius: 6px;
+    height: 44px;
+    padding: 0 24px ;
+    cursor: pointer;
+}
+
+
+
+
+.s2-registrer-button:hover{
+    font-weight: 700;
+    background-color: #46724F ;
+    color: white;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.304);
+    border: 1px solid black;
 }
