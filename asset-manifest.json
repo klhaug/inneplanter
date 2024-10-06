@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/inneplanter/static/css/main.44f2c750.css",
-    "main.js": "/inneplanter/static/js/main.aaa78ed1.js",
+    "main.css": "/inneplanter/static/css/main.aacf32ea.css",
+    "main.js": "/inneplanter/static/js/main.f0896d09.js",
     "static/js/453.c0a84801.chunk.js": "/inneplanter/static/js/453.c0a84801.chunk.js",
     "index.html": "/inneplanter/index.html",
-    "main.44f2c750.css.map": "/inneplanter/static/css/main.44f2c750.css.map",
-    "main.aaa78ed1.js.map": "/inneplanter/static/js/main.aaa78ed1.js.map",
+    "main.aacf32ea.css.map": "/inneplanter/static/css/main.aacf32ea.css.map",
+    "main.f0896d09.js.map": "/inneplanter/static/js/main.f0896d09.js.map",
     "453.c0a84801.chunk.js.map": "/inneplanter/static/js/453.c0a84801.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.44f2c750.css",
-    "static/js/main.aaa78ed1.js"
+    "static/css/main.aacf32ea.css",
+    "static/js/main.f0896d09.js"
   ]
 }
