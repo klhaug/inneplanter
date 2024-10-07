@@ -21,11 +21,11 @@ useEffect(() => {
   return (
     <div className="App">
       <header className="App-header">
-       <Navbar />
+        <Navbar />
       </header>
-      <Hero />
-      <Section2 />
-      <Section3 plantData = {plantData} />
+        <Hero />
+        <Section2 />
+        <Section3 plantData = {plantData} />
     </div>
   );
 }

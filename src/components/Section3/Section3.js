@@ -1,6 +1,8 @@
 import React from "react";
 import Card from "../card/Card";
-import './Section3.css'
+import './Section3.css';
+import './Section3MediaQueries.css'
+
 
 function Section3({plantData}) {
     return(

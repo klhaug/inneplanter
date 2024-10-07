@@ -11,7 +11,13 @@
 }
 
 .s3-background h2 {
-    margin: 16px 0;
+    font-size: 40px ;
+    box-sizing: border-box;
+    margin-bottom: 32px;
+    margin-top: 0px;
+    color: black;
+    font-family: Raleway;
+    font-weight: 700;
 }
 
 .s3-add-button {
