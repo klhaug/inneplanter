@@ -1,0 +1,10 @@
+.s3-background {
+    background-color: #F3F7F7;
+    padding: 0 90px;
+}
+
+.s3-content-frame {
+    height: 1080px;
+    display: flex;
+    align-items: center;
+}
