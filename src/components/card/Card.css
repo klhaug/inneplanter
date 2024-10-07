@@ -1,7 +1,66 @@
 .card-container {
-    height: 280px;
-    width: 1080px;
+    box-sizing: border-box;
+    display: flex;
+    gap: 88px;
+    padding: 24px 48px;
+    margin: 16px 0;
+    max-width: 1085px;
+    height: auto;
     background-color: white;
     border-radius: 6px;
+}
 
+.card-text-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 408px ;
+    gap: 16px;
+}
+
+.card-text-container h3 {
+    color: black;
+    font-family: Raleway;
+    font-size: 32px;
+    margin: 0;
+}
+
+.plant-image-container {
+    max-width: 174px;
+    min-width: 174px;
+    aspect-ratio: 4/5;
+    border-radius: 6px;
+}
+
+.plant-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.stats-container {
+    display: flex;
+    gap: 68px;
+    
+}
+
+.card-container p {
+    margin: 0;
+}
+
+
+.slekt {
+    font-weight: 700;
+}
+.vann {
+    font-weight: 700;
+}
+.giftig {
+    font-weight: 700;
+}
+
+.beskrivelse-container {
+    max-height: 120px ;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
 }

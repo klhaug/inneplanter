@@ -9,9 +9,9 @@ function Section3({plantData}) {
                 <div className="s3-content-wrapper">
                     <h2>Nylig lagt til</h2>
                     <Card plantData = {plantData} />
-                    <div className="button-container">
-                        <button>Legg til ny plante</button>
-                        <button>Se alle</button>
+                    <div className="s3-button-container">
+                        <button className="s3-add-button">Legg til ny plante</button>
+                        <button className="s3-database-button">Se alle</button>
                     </div>
                 </div>
             </div>
