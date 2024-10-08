@@ -10,14 +10,20 @@
     min-height: 380px;
     margin: auto;
     padding: 72px 90px;
-    max-width: 1440px;
+    max-width: 1200px;
 }
 
 .footer-content-container {
-    display: flex;
-    gap: 48px;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: minmax(300px, 2fr) repeat(auto-fit, minmax(200px, 1fr));
+
+    gap: 24px; /* Adds spacing between grid items */
+    /* justify-content: space-between; */
 }
+
+/* .footer-content-container div:first-child {
+    margin-right: 50px;
+} */
 
 .footer-content-container div {
     display: flex;
@@ -44,4 +50,21 @@
 .footer-background li :hover {
     text-decoration: underline;
 
+}
+
+.footer-kontakt h3 {
+}
+
+.footer-kontakt ul {
+    margin-top: 14px;
+    min-width: 200px;
+    display: grid;
+    grid-template-columns: 0.25fr 2fr;
+    gap: 24px 12px;
+}
+.footer-kontakt a {
+    color: white;
+}
+.footer-kontakt ul svg{
+    justify-items: start;
 }
