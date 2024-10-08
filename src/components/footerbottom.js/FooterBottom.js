@@ -1,5 +1,6 @@
 import React from "react";
 import './FooterBottom.css'
+import './FooterBottomQueries.css'
 
 function FooterBottom() {
     return (

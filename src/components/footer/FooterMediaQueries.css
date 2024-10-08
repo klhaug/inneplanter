@@ -3,5 +3,15 @@
     .footer-content-container {
         grid-template-columns: 1fr;
     }
+    .description-container p {
+        max-width: none;
+    }
 }
+
+@media screen and (max-width: 542px) {
+    .footer-wrapper {
+        padding: 72px 20px ;
+    }
+    }
+
 
