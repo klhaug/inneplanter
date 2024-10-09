@@ -10,7 +10,11 @@ import { useEffect, useState } from 'react';
 
 function App() {
 const [plantData, setPlantdata] = useState([])
+const [route, setRoute] = useState('home')
 
+const onButtonClick = (route) => {
+  setRoute(route)
+}
 
 useEffect(() => {
     fetch('http://localhost:3000/')
@@ -20,16 +24,28 @@ useEffect(() => {
   }, [])
 
   console.log(plantData)
+  console.log(route)
+
+
   return (
     <div className="App">
       <header className="App-header">
-        <Navbar />
+        <Navbar onButtonClick = {onButtonClick} />
       </header>
         <Hero />
-        <Section2 />
-        <Section3 plantData = {plantData} />
-        <Footer />
-        <FooterBottom />
+        {route === 'home' ?
+          <div>
+            <Section2 />
+            <Section3 plantData = {plantData} />
+            <Footer />
+            <FooterBottom />
+          </div>
+          :
+          <div>
+           <Footer />
+           <FooterBottom />
+         </div>
+        }
     </div>
   );
 }
