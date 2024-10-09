@@ -2,6 +2,7 @@
 import './App.css';
 import Navbar from '../../components/Navbar/Navbar';
 import Hero from '../../components/Hero/Hero';
+import Form from '../../components/Form/Form';
 import Section2 from '../../components/Section2/Section2';
 import Section3 from '../../components/Section3/Section3';
 import Footer from '../../components/footer/Footer';
@@ -32,20 +33,17 @@ useEffect(() => {
       <header className="App-header">
         <Navbar onButtonClick = {onButtonClick} />
       </header>
-        <Hero />
+      <div className="hero-wrapper"> 
         {route === 'home' ?
-          <div>
-            <Section2 />
-            <Section3 plantData = {plantData} />
-            <Footer />
-            <FooterBottom />
-          </div>
-          :
-          <div>
-           <Footer />
-           <FooterBottom />
-         </div>
+        <Hero onButtonClick = {onButtonClick}/> 
+        :
+        <Form />
         }
+      </div>
+        <Section2 />
+        <Section3 plantData = {plantData} />
+        <Footer />
+        <FooterBottom />
     </div>
   );
 }

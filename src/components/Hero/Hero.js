@@ -3,16 +3,15 @@ import './Hero.css'
 import './HeroMediaQueries.css'
 
 
-function Hero () {
+function Hero ({onButtonClick}) {
     return(
-        <div className="hero-wrapper">
             <div className="hero-container">
                 <div className="hero-text-container"> 
                     <h1>Del din planteglede med andre</h1>
                     <div className="search-and-button-container">
                         <input className="hero-search" placeholder="Søk etter plante" type="search"/>
                         <div className="hero-button-container">
-                            <button className="hero-add-button">Legg til</button>
+                            <button onClick={() => onButtonClick('leggtilplante')} className="hero-add-button">Legg til</button>
                             <button className="hero-database-button">Se alle</button>
                         </div>
                     </div>
@@ -22,7 +21,6 @@ function Hero () {
                 </div>
 
             </div>
-        </div>
     );
 }
 

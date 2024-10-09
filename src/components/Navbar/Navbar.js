@@ -8,7 +8,7 @@ function Navbar({onButtonClick}) {
 
                 <nav className="navbar">
                     <div className="logo-container">
-                        <a href='#hjem'>Inneplanter</a>
+                        <a href='#hjem' onClick={() => onButtonClick('home')}>Inneplanter</a>
                     </div>
                     <ul className="nav-right-container">
                         <li><a href="#hjem" onClick={() => onButtonClick('home')}>Hjem</a></li>
