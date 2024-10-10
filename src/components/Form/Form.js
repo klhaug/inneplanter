@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import './Form.css'
+import './FormMediaQueries.css'
+
 
 function Form () {
 const [navn, setNavn] = useState("");
@@ -47,7 +49,7 @@ const handleChange = (event) => {
     return(
         <div className="form-container">
             <div className="form-header-container">
-                <h1>Legg til <u>din</u> plante!</h1>
+                <h1 className="form-header">Legg til <u>din</u> plante!</h1>
             </div>
             <form className="add-form"method="post">
                 <div className="form-fields-container">
