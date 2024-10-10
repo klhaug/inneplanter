@@ -113,6 +113,7 @@
     text-align: start;
     vertical-align: top;
     height: 110px;
+    resize: none;
 }
 
 .form-button-container {

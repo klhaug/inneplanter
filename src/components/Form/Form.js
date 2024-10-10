@@ -3,7 +3,7 @@ import './Form.css'
 import './FormMediaQueries.css'
 
 
-function Form () {
+function Form ({onPlantAdded}) {
 const [navn, setNavn] = useState("");
 const [planteslekt, setPlanteslekt] = useState("");
 const [vann, setVann] = useState("");
@@ -28,19 +28,44 @@ const handleImageUpload = (event) => {
 };
 
 
-const testObject = {
-    Navn: {navn},
-    Planteslekt: {planteslekt},
-    Vann: {vann},
-    Giftig: {giftig},
-    Info: {info},
-    Bilde: {selectedFile}
-}
+
 
 const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(testObject)
+        fetch('http://localhost:3000/submit', {
+            method: 'post',
+            headers: {'Content-type': 'application/json'},
+            body: JSON.stringify({
+                navn: navn,
+                slekt: planteslekt,
+                vann: vann,
+                giftig: giftig,
+                beskrivelse: info,
+                bilde: selectedFile
+            })
+        })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .then(onPlantAdded)
 }
+
+// onSubmitSignIn = () => {
+//     fetch('https://polar-fjord-45385-a0c6e73396d4.herokuapp.com/signin', {
+//         method: 'post',
+//         headers: {'Content-type': 'application/json'},
+//         body: JSON.stringify({
+//             email: this.state.signInEmail,
+//             password: this.state.signInPassword
+//         })
+//     })
+//         .then(response => response.json())
+//         .then(user => {
+//             if (user.id) {
+//                 this.props.loadUser(user)
+//                 this.props.onRouteChange("home")
+//             }
+//         })
+// }
 
 const handleChange = (event) => {
     event.target.blur()

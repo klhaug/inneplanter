@@ -12,6 +12,7 @@ import { useEffect, useState } from 'react';
 function App() {
 const [plantData, setPlantdata] = useState([])
 const [route, setRoute] = useState('home')
+const [fetchTrigger, setFetchTrigger] = useState(false);
 
 const onButtonClick = (route) => {
   setRoute(route)
@@ -21,9 +22,13 @@ useEffect(() => {
     fetch('http://localhost:3000/')
       .then(response => response.json())
       .then(plant => setPlantdata(plant))
+  }, [fetchTrigger])
 
-  }, [])
+  const handlePlantAdded = () => {
+    setFetchTrigger((prev) => !prev); 
+  };
 
+  console.log(fetchTrigger)
   console.log(plantData)
   console.log(route)
 
@@ -37,7 +42,7 @@ useEffect(() => {
         {route === 'home' ?
         <Hero onButtonClick = {onButtonClick}/> 
         :
-        <Form />
+        <Form onPlantAdded={handlePlantAdded}/>
         }
       </div>
         <Section2 />
