@@ -2,6 +2,7 @@ import React from "react";
 import './Card.css'
 import './CardMediaQueries.css'
 
+
 function Card ({plantData}) {
     const {Navn, Slekt, Vann, Giftig, Beskrivelse, Bilde} = plantData;
 
