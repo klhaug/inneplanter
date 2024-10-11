@@ -1,0 +1,62 @@
+.database-background {
+    height: 850px;
+}
+
+.database-header-container h1 {
+    color: black;
+}
+
+.database-wrapper {
+    margin: 90px;
+}
+
+.database-content-container {
+    margin: auto;
+    max-width: 1440px;
+}
+
+.database-add-button {
+    flex: 1;
+    color: white;
+    align-items: center;
+    font-family: Raleway;
+    font-size: 19px;
+    font-weight: 700;
+    background-color: #2E4D42;
+    border: 1px solid #2E4D42;
+    border-radius: 6px;
+    height: 44px;
+    padding: 0 24px ;
+    cursor: pointer;
+}
+
+.database-header-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.database-button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.database-add-button:hover {
+    font-weight: 700;
+    background-color: #46724F ;
+    color: white;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.304);
+    border: 1px solid black;
+}
+
+.database-search {
+    flex: 2;
+    font-family: Raleway;
+    height: 44px;
+    padding: 0 24px;
+    border-radius: 6px;
+    font-size: 19px;
+    border: 1px solid rgba(0, 0, 0, 0.459);
+    outline: none; 
+}

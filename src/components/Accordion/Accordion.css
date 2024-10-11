@@ -1,0 +1,25 @@
+.accordion-item {
+    border-top: 1px solid black;
+  }
+.accordion-item:last-child {
+    border-bottom: 1px solid black;
+  }
+  
+  .accordion-title {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 48px;
+    cursor: pointer;
+  }
+
+  .accordion-title h3 {
+    color: black;
+    font-size: 19px;
+    font-weight: 400;
+    font-family: Raleway;
+  }
+  
+  .accordion-content {
+    padding: 16px 48px;
+    border-top: 1px solid #ccc;
+  }

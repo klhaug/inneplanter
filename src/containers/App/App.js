@@ -7,6 +7,7 @@ import Section2 from '../../components/Section2/Section2';
 import Section3 from '../../components/Section3/Section3';
 import Footer from '../../components/footer/Footer';
 import FooterBottom from '../../components/footerbottom.js/FooterBottom';
+import Database from '../../components/Database/Database';
 import { useEffect, useState } from 'react';
 
 function App() {
@@ -47,6 +48,7 @@ useEffect(() => {
       </div>
         <Section2 />
         <Section3 plantData = {plantData} />
+        <Database />
         <Footer />
         <FooterBottom />
     </div>
