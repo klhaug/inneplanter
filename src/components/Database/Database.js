@@ -2,7 +2,7 @@ import React from "react";
 import './Database.css'
 import Accordion from "../Accordion/Accordion";
 
-function Database () {
+function Database ({plantData}) {
     return(
         <div className="database-background">
             <div className="database-wrapper">
@@ -15,7 +15,7 @@ function Database () {
                         </div>
                     </div>
                     <div className="database-container">
-                        <Accordion />
+                        <Accordion plantData = {plantData}/>
                     </div>
                 </div>
             </div>

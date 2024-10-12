@@ -19,17 +19,15 @@ const AccordionItem = ({ title, content }) => {
   );
 };
 
-const Accordion = () => {
-  const accordionData = [
-    { title: "Alocasia", content: "Content for section 1" },
-    { title: "Monstera", content: "Content for section 2" },
-    { title: "Figus Figma", content: "Content for section 3" },
-  ];
+const Accordion = ({plantData}) => {
+  const accordionData = plantData
+
+  console.log(plantData)
 
   return (
     <div className="accordion">
       {accordionData.map((item, index) => (
-        <AccordionItem key={index} title={item.title} content={item.content} />
+        <AccordionItem key={index} title={item.navn} content={item.beskrivelse} />
       ))}
     </div>
   );

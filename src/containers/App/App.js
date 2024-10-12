@@ -11,7 +11,8 @@ import Database from '../../components/Database/Database';
 import { useEffect, useState } from 'react';
 
 function App() {
-const [plantData, setPlantdata] = useState([])
+const [latestPlantData, setLatestPlantdata] = useState([])
+const [plantData, setPlantData] = useState([])
 const [route, setRoute] = useState('home')
 const [fetchTrigger, setFetchTrigger] = useState(false);
 
@@ -22,16 +23,24 @@ const onButtonClick = (route) => {
 useEffect(() => {
     fetch('http://localhost:3000/')
       .then(response => response.json())
-      .then(plant => setPlantdata(plant))
+      .then(plant => setLatestPlantdata(plant))
   }, [fetchTrigger])
 
   const handlePlantAdded = () => {
     setFetchTrigger((prev) => !prev); 
   };
 
+useEffect(() => {
+  fetch("http://localhost:3000/plantdatabase")
+    .then(response => response.json())
+    .then(data => setPlantData(data))
+}, [fetchTrigger ])
+
+
   console.log(fetchTrigger)
-  console.log(plantData)
+  console.log(latestPlantData)
   console.log(route)
+  console.log(plantData)
 
 
   return (
@@ -47,8 +56,8 @@ useEffect(() => {
         }
       </div>
         <Section2 />
-        <Section3 plantData = {plantData} />
-        <Database />
+        <Section3 plantData = {latestPlantData} />
+        <Database plantData = {plantData}/>
         <Footer />
         <FooterBottom />
     </div>
