@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './Accordion.css'
 
-const AccordionItem = ({ title, content }) => {
+const AccordionItem = ({ navn, slekt, vann, giftig, beskrivelse, bilde }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleAccordion = () => {
@@ -11,10 +11,17 @@ const AccordionItem = ({ title, content }) => {
   return (
     <div className="accordion-item">
       <div className="accordion-title" onClick={toggleAccordion}>
-        <h3>{title}</h3>
+        <h3>{navn}</h3>
         <span>{isOpen ? "-" : "+"}</span>
       </div>
-      {isOpen && <div className="accordion-content">{content}</div>}
+      {isOpen && <div className="accordion-content">
+
+        Slekt:{slekt}<br/>
+        Vann:{vann}<br />
+        Giftig:{giftig}<br />
+        Beskrivelse:{beskrivelse}
+        {/* {bilde} */}
+        </div>}
     </div>
   );
 };
@@ -27,7 +34,7 @@ const Accordion = ({plantData}) => {
   return (
     <div className="accordion">
       {accordionData.map((item, index) => (
-        <AccordionItem key={index} title={item.navn} content={item.beskrivelse} />
+        <AccordionItem key={index} navn={item.navn} slekt={item.slekt} giftig={item.giftig} vann={item.vann} beskrivelse={item.beskrivelse} bilde={item.bilde} />
       ))}
     </div>
   );
