@@ -15,12 +15,29 @@ const AccordionItem = ({ navn, slekt, vann, giftig, beskrivelse, bilde }) => {
         <span>{isOpen ? "-" : "+"}</span>
       </div>
       {isOpen && <div className="accordion-content">
-
-        Slekt:{slekt}<br/>
-        Vann:{vann}<br />
-        Giftig:{giftig}<br />
-        Beskrivelse:{beskrivelse}
-        {/* {bilde} */}
+        <div className="card-text-container">
+          <h3>{navn}</h3>
+          <div className="stats-container"> 
+            <div className="slekt-container">
+              <p>Slekt:</p>
+              <p className="slekt">{slekt}</p>
+            </div>
+            <div className="vann-container">
+                <p>Vann:</p>
+                <p className="vann">{vann}</p>
+            </div>
+            <div className="giftig-container">
+                <p>Giftig:</p>
+                <p className="giftig">{giftig}</p>
+            </div>
+            </div>
+            <div className="beskrivelse-container">
+                <p>{beskrivelse}</p>
+          </div>
+          </div>
+          <div className="plant-image-container">
+                <img className="plant-image" src={bilde} alt="a plant"/>
+          </div>
         </div>}
     </div>
   );
