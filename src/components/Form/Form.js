@@ -34,7 +34,7 @@ const handleSubmit = (event) => {
     event.preventDefault();
         fetch('http://localhost:3000/submit', {
             method: 'post',
-            headers: {'Content-type': 'application/json'},
+            headers: {'Content-type': 'multipart/form-data'},
             body: JSON.stringify({
                 navn: navn,
                 slekt: planteslekt,
@@ -76,7 +76,7 @@ const handleChange = (event) => {
             <div className="form-header-container">
                 <h1 className="form-header">Legg til <u>din</u> plante!</h1>
             </div>
-            <form className="add-form"method="post">
+            <form className="add-form"method="post" encType="multipart/form-data">
                 <div className="form-fields-container">
                     {/* Navn */}
                   <input
@@ -148,7 +148,7 @@ const handleChange = (event) => {
                         className="input-image-button" 
                         type="file" 
                         id="file-upload" 
-                        name="avatar" 
+                        name="uploaded_file" 
                         accept="image/png, image/jpeg" 
                         onChange={handleImageUpload}
                         />
