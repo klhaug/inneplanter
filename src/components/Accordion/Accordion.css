@@ -10,10 +10,16 @@
 }
   
   .accordion-title {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1.25fr 0.75fr 0.5fr;
     padding: 16px 48px;
     cursor: pointer;
+    gap: 36px;
+  }
+
+  .accordion-title span{
+    text-align: center;
   }
 
   .accordion-title h3 {
@@ -21,7 +27,11 @@
     font-size: 19px;
     font-weight: 400;
     font-family: Raleway;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
   }
+
   
   .accordion-content {
       box-sizing:border-box;
@@ -34,4 +44,11 @@
       border-radius: 6px;
       /* box-shadow: 0 0 16px #2e384d11; */
       /* border-top: 1px solid #ccc; */
+  }
+
+  .seeless-container p {
+    cursor: pointer;
+  }
+  .seeless-container p:hover {
+    font-weight: 500;
   }

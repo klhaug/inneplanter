@@ -1,0 +1,20 @@
+@media screen and (max-width: 814px)  {
+    .database-header-container {
+        flex-direction: column;
+        margin-bottom: 32px;
+    }
+
+    .database-add-button {
+        display: none;
+    }
+    .mobile-database-button-container {
+        display: flex;
+    }
+}
+
+
+@media screen and (max-width: 542px) {
+ .database-wrapper {
+    margin: 32px 20px;
+ }   
+}

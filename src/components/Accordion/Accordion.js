@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './Accordion.css'
+import './AccordionMediaQueries.css'
 
 const AccordionItem = ({ navn, slekt, vann, giftig, beskrivelse, bilde }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,10 +11,13 @@ const AccordionItem = ({ navn, slekt, vann, giftig, beskrivelse, bilde }) => {
 
   return (
     <div className="accordion-item">
-      <div className="accordion-title" onClick={toggleAccordion}>
+      {!isOpen && <div className="accordion-title" onClick={toggleAccordion}>
         <h3>{navn}</h3>
+        <h3>{slekt}</h3>
+        <h3>{vann}</h3>
+        <h3>Giftig: {giftig}</h3>
         <span>{isOpen ? "-" : "+"}</span>
-      </div>
+      </div>}
       {isOpen && <div className="accordion-content">
         <div className="card-text-container">
           <h3>{navn}</h3>
@@ -33,6 +37,9 @@ const AccordionItem = ({ navn, slekt, vann, giftig, beskrivelse, bilde }) => {
             </div>
             <div className="beskrivelse-container">
                 <p>{beskrivelse}</p>
+          </div>
+          <div className="seeless-container">
+            <p onClick={toggleAccordion}><i>Se mindre</i></p>
           </div>
           </div>
           <div className="plant-image-container">

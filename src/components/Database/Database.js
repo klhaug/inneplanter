@@ -1,6 +1,8 @@
 import React from "react";
 import './Database.css'
+import './DatabaseMediaQueries.css'
 import Accordion from "../Accordion/Accordion";
+
 
 function Database ({plantData}) {
     return(
@@ -16,6 +18,9 @@ function Database ({plantData}) {
                     </div>
                     <div className="database-container">
                         <Accordion plantData = {plantData}/>
+                    </div>
+                    <div className="mobile-database-button-container">
+                        <button className="mobile-database-add-button">+</button>
                     </div>
                 </div>
             </div>
