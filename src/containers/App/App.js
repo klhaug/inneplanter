@@ -50,7 +50,7 @@ useEffect(() => {
       </header>
       <div className="hero-wrapper"> 
         {route === 'home' ?
-        <Hero onButtonClick = {onButtonClick}/> 
+        <Hero plantData = {plantData} onButtonClick = {onButtonClick}/> 
         :
         <Form onPlantAdded={handlePlantAdded}/>
         }
