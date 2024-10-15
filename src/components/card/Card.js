@@ -4,7 +4,7 @@ import './CardMediaQueries.css'
 
 
 function Card ({plantData}) {
-    const {navn, slekt, vann, giftig, beskrivelse, bilde} = plantData;
+    const {navn, slekt, vann, giftig, beskrivelse, imagePath} = plantData;
 
     return (
         <div className="card-container">
@@ -29,7 +29,7 @@ function Card ({plantData}) {
                 </div>
             </div>
             <div className="plant-image-container">
-                <img className="plant-image" src={bilde} alt="a plant"/>
+                <img className="plant-image" src={`http://localhost:3000/${imagePath}`} alt="a plant"/>
             </div>
             <button className="mobile-card-button">Les mer</button>
         </div>

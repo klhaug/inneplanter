@@ -1,4 +1,32 @@
+@media screen and (max-width: 883px) {
+    .accordion-content {
+        padding: 24px 0;
+    }
+}
+
 @media screen and (max-width: 815px) {
+    .accordion-content {
+        flex-direction: column;
+    }
+
+    .accordion-stats-container p {
+        text-wrap: nowrap;
+    }
+
+    .accordion-stats-container {
+        gap: 0px;
+        justify-content: space-between;
+    }
+
+
+    .accordion-plant-image-container {
+        max-width: max-content;
+    }
+
+    .accordion-beskrivelse-container {
+        overflow-x: none;
+        height: auto;
+    }
     
     .accordion-title {
         grid-template-columns: 1fr 0.25fr;
@@ -12,5 +40,32 @@
     }
     .accordion-title h3:nth-child(2) {
         display: none;
+    }
+
+    .seeless-container {
+        display: none;
+    }
+
+    .mobile-seeless-container {
+        display: flex;
+        justify-content: end;
+        margin-top: 12px;
+        cursor: pointer;
+    }
+    .mobile-seeless-container p {
+        display: flex;
+        border: 1px solid black;
+        padding: 0 24px;
+        border-radius: 6px;
+        height: 44px;
+        align-items: center;
+        color: white;
+        background-color: #2E4D42;
+
+
+    }
+    .mobile-seeless-container p:hover {
+        background-color:#46724F  ;
+       
     }
 }

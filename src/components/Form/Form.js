@@ -28,22 +28,22 @@ const handleImageUpload = (event) => {
 };
 
 
+const formData = new FormData();
+formData.append('navn', navn);
+formData.append('slekt', planteslekt);
+formData.append('vann', vann);
+formData.append('giftig', giftig);
+formData.append('beskrivelse', info);
+formData.append('bilde', selectedFile);
+
 
 
 const handleSubmit = (event) => {
     event.preventDefault();
         fetch('http://localhost:3000/submit', {
             method: 'post',
-            headers: {'Content-type': 'multipart/form-data'},
-            body: JSON.stringify({
-                navn: navn,
-                slekt: planteslekt,
-                vann: vann,
-                giftig: giftig,
-                beskrivelse: info,
-                bilde: selectedFile
-            })
-        })
+            body: formData
+          })
         .then(response => response.json())
         .then(data => console.log(data))
         .then(onPlantAdded)

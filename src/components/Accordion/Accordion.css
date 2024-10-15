@@ -36,12 +36,13 @@
   .accordion-content {
       box-sizing:border-box;
       display: flex;
-      gap: 88px;
+      justify-content: space-between;
       padding: 24px 48px;
       margin: 16px 0;
       height: auto;
       background-color: white;
       border-radius: 6px;
+      gap: 24px;
       /* box-shadow: 0 0 16px #2e384d11; */
       /* border-top: 1px solid #ccc; */
   }
@@ -52,3 +53,94 @@
   .seeless-container p:hover {
     font-weight: 500;
   }
+
+
+
+
+
+.accordion-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* min-width: 408px ; */
+    gap: 16px;
+}
+
+.accordion-text-container h3 {
+    color: black;
+    font-family: Raleway;
+    font-size: 32px;
+    margin: 0;
+}
+
+.accordion-plant-image-container {
+    max-width: 260px;
+    min-width: 174px;
+    aspect-ratio: 4/5;
+    border-radius: 6px;
+}
+
+.accordion-plant-image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.accordion-stats-container {
+    display: flex;
+    gap: 68px;
+    
+}
+
+.card-container p {
+    margin: 0;
+}
+
+
+.accordion-slekt {
+    font-weight: 700;
+}
+.accordion-vann {
+    font-weight: 700;
+}
+.accordion-giftig {
+    font-weight: 700;
+}
+
+.accordion-beskrivelse-container {
+    height: 120px ;
+    max-width: 800px;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+}
+
+.mobile-card-button {
+    display: none;
+    
+}
+
+.mobile-seeless-container {
+  display: none;
+}
+
+.seeless-container {
+  display: flex;
+}
+
+.seeless-container p {
+  display: flex;
+  border: 1px solid black;
+  padding: 0 24px;
+  border-radius: 6px;
+  height: 44px;
+  align-items: center;
+  color: white;
+  background-color: #2E4D42;
+
+
+}
+.seeless-container p:hover {
+  background-color:#46724F  ;
+ 
+}

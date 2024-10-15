@@ -19,31 +19,34 @@ const AccordionItem = ({ navn, slekt, vann, giftig, beskrivelse, bilde }) => {
         <span>{isOpen ? "-" : "+"}</span>
       </div>}
       {isOpen && <div className="accordion-content">
-        <div className="card-text-container">
+        <div className="accordion-text-container">
           <h3>{navn}</h3>
-          <div className="stats-container"> 
-            <div className="slekt-container">
+          <div className="accordion-stats-container"> 
+            <div className="accordion-slekt-container">
               <p>Slekt:</p>
-              <p className="slekt">{slekt}</p>
+              <p className="accordion-slekt">{slekt}</p>
             </div>
-            <div className="vann-container">
+            <div className="accordion-vann-container">
                 <p>Vann:</p>
-                <p className="vann">{vann}</p>
+                <p className="accordion-vann">{vann}</p>
             </div>
-            <div className="giftig-container">
+            <div className="accordion-giftig-container">
                 <p>Giftig:</p>
-                <p className="giftig">{giftig}</p>
+                <p className="accordion-giftig">{giftig}</p>
             </div>
             </div>
-            <div className="beskrivelse-container">
+            <div className="accordion-beskrivelse-container">
                 <p>{beskrivelse}</p>
           </div>
           <div className="seeless-container">
             <p onClick={toggleAccordion}><i>Se mindre</i></p>
           </div>
           </div>
-          <div className="plant-image-container">
-                <img className="plant-image" src={bilde} alt="a plant"/>
+          <div className="accordion-plant-image-container">
+                <img className="accordion-plant-image" src={`http://localhost:3000/${bilde}`} alt="a plant"/>
+          </div>
+          <div className="mobile-seeless-container">
+            <p onClick={toggleAccordion}>Se mindre</p>
           </div>
         </div>}
     </div>
@@ -58,7 +61,7 @@ const Accordion = ({plantData}) => {
   return (
     <div className="accordion">
       {accordionData.map((item, index) => (
-        <AccordionItem key={index} navn={item.navn} slekt={item.slekt} giftig={item.giftig} vann={item.vann} beskrivelse={item.beskrivelse} bilde={item.bilde} />
+        <AccordionItem key={index} navn={item.navn} slekt={item.slekt} giftig={item.giftig} vann={item.vann} beskrivelse={item.beskrivelse} bilde={item.imagePath} />
       ))}
     </div>
   );
