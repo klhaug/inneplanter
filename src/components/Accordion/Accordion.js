@@ -39,7 +39,7 @@ const AccordionItem = ({ navn, slekt, vann, giftig, beskrivelse, bilde }) => {
                 <p>{beskrivelse}</p>
           </div>
           <div className="seeless-container">
-            <p onClick={toggleAccordion}><i>Se mindre</i></p>
+            <p onClick={toggleAccordion}>Se mindre</p>
           </div>
           </div>
           <div className="accordion-plant-image-container">
@@ -56,7 +56,6 @@ const AccordionItem = ({ navn, slekt, vann, giftig, beskrivelse, bilde }) => {
 const Accordion = ({plantData}) => {
   const accordionData = plantData
 
-  console.log(plantData)
 
   return (
     <div className="accordion">
