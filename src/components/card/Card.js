@@ -4,7 +4,8 @@ import './CardMediaQueries.css'
 
 
 function Card ({plantData}) {
-    const {navn, slekt, vann, giftig, beskrivelse, imagePath} = plantData;
+    const latestPlantData = plantData.at(-1)
+    const {navn, slekt, vann, giftig, beskrivelse, imagePath} = latestPlantData;
 
     return (
         <div className="card-container">

@@ -18,6 +18,10 @@
         max-width: 380px;
         margin-top: -31px;
     }
+
+    .searchbox-ul{
+        top: 60px;
+    }
 }
 @media screen and (max-width: 490px){
     h1 {
@@ -39,7 +43,7 @@
 }
 
 
-@media screen and (max-width: 440px){
+@media screen and (max-width: 465px){
     .hero-container {
         align-items: center;
     }

@@ -8,14 +8,62 @@ import Section3 from '../../components/Section3/Section3';
 import Footer from '../../components/footer/Footer';
 import FooterBottom from '../../components/footerbottom.js/FooterBottom';
 import Database from '../../components/Database/Database';
-import { useEffect, useState } from 'react';
+import ErrorPage from '../Error/error-page';
+import Home from '../Home/Home';
+import Applayout from '../Applayout/Applayout';
+
+import { Children, useEffect, useState } from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Applayout />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+        loader: async () => {
+          const response = await fetch ("http://localhost:3000/plantdatabase")
+          return response.json();
+        },
+      },
+      {
+        path: 'add-plant',
+        element: <Form />,
+      },
+      {
+        path: 'database',
+        element: <Database />,
+        loader: async () => {
+          const response = await fetch ("http://localhost:3000/plantdatabase")
+          return response.json();
+        },
+        errorElement: <ErrorPage />,
+        children: [
+          {
+            path:"add-plant",
+            element: <Form />
+          },
+          {
+            path:'new-plant-added',
+            element: null
+          }
+    ]
+  },
+  
+    ]
+  }
+])
+
+
 
 function App() {
 const [latestPlantData, setLatestPlantdata] = useState([])
 const [plantData, setPlantData] = useState([])
 const [route, setRoute] = useState('home')
 const [fetchTrigger, setFetchTrigger] = useState(false);
-
 const onButtonClick = (route) => {
   setRoute(route)
 }
@@ -34,7 +82,7 @@ useEffect(() => {
   fetch("http://localhost:3000/plantdatabase")
     .then(response => response.json())
     .then(data => setPlantData(data))
-}, [fetchTrigger ])
+}, [fetchTrigger])
 
 
   console.log(fetchTrigger)
@@ -45,7 +93,8 @@ useEffect(() => {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <RouterProvider router={router}/>
+      {/* <header className="App-header">
         <Navbar onButtonClick = {onButtonClick} />
       </header>
       <div className="hero-wrapper"> 
@@ -59,7 +108,7 @@ useEffect(() => {
         <Section3 plantData = {latestPlantData} />
         <Database plantData = {plantData}/>
         <Footer />
-        <FooterBottom />
+        <FooterBottom /> */}
     </div>
   );
 }

@@ -1,12 +1,39 @@
 .database-background {
+
+}
+
+.database-hero-img-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 90px;
+}
+
+.database-hero-img {
+    width: 70%;
 }
 
 .database-header-container h1 {
+    color: black;
+    margin: 20px 0;
+    text-wrap: nowrap;
+}
+
+.database-card-container {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 90px;
+}
+.database-card-container h1 {
     color: black;
 }
 
 .database-wrapper {
     margin: 90px;
+    min-height: 800px;
 }
 
 .database-content-container {
@@ -16,6 +43,7 @@
 
 .database-add-button {
     flex: 1;
+    text-wrap: nowrap;
     color: white;
     align-items: center;
     font-family: Raleway;
@@ -42,6 +70,15 @@
 }
 
 .database-header-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 46px;
+}
+
+.database-search-and-button-container {
+    flex: 1;
+    gap: 32px;
     display: flex;
     justify-content: space-between;
 }
@@ -60,6 +97,11 @@
     gap: 12px;
 }
 
+.database-header-container .hero-add-button {
+    border: 1px solid black;
+    text-wrap: nowrap;
+}
+
 .database-add-button:hover {
     font-weight: 700;
     background-color: #46724F ;
@@ -74,9 +116,16 @@
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.304);
     border: 1px solid black;
 }
-
+.database-search-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
 .database-search {
-    flex: 2;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
     font-family: Raleway;
     height: 44px;
     padding: 0 24px;
@@ -85,3 +134,24 @@
     border: 1px solid rgba(0, 0, 0, 0.459);
     outline: none; 
 }
+
+.database-wrapper .card-container {
+    box-sizing: border-box;
+    max-width: 1200px;
+}
+
+.database-outlet-container .hero-wrapper {
+    background-color: #2E4D42;
+    margin: auto;
+    max-width: 1200px;
+    height: auto;
+    padding: 40px 0;
+    margin-bottom: 50px;
+    border-radius: 6px;
+    box-shadow: 0 0 16px #2e384d11;
+}
+
+.database-outlet-container h1 {
+    color: white
+}
+

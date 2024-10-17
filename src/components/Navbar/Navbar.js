@@ -1,4 +1,5 @@
 import React from "react";
+import { Outlet, Link } from "react-router-dom";
 import "./navbar.css";
 import './NavbarMediaQueries.css'
 
@@ -8,11 +9,11 @@ function Navbar({onButtonClick}) {
 
                 <nav className="navbar">
                     <div className="logo-container">
-                        <a href='#hjem' onClick={() => onButtonClick('home')}>Inneplanter</a>
+                      <Link to ={`/`}>Inneplanter</Link>
                     </div>
                     <ul className="nav-right-container">
-                        <li><a href="#hjem" onClick={() => onButtonClick('home')}>Hjem</a></li>
-                        <li><a href ="#planter" onClick={() => onButtonClick("planter")}>Planter</a></li>
+                        <li><Link to ={`/`}>Hjem</Link></li>
+                        <li><Link to ={`database`}>Planter</Link></li>
                     </ul>
                 </nav>
             </div>

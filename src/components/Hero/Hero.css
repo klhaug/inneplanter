@@ -42,6 +42,7 @@ h1 {
 
 .search-and-button-container {
     display: flex;
+    position: relative;
     flex-direction: column;
 }
 
@@ -57,12 +58,18 @@ h1 {
     outline: none; 
 }
 
+/* .hero-search:focus {
+    border-radius: 6px 6px 0px 0px;
+} */
+
 .hero-button-container {
     display: flex;
     gap: 12px;
 }
 
 .hero-add-button {
+    display: flex;
+    justify-content: center;
     flex: 1;
     color: #212121;
     align-items: center;
@@ -87,6 +94,9 @@ h1 {
     
 }
 .hero-database-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex: 1;
     font-family: Raleway;
     color: white;
@@ -105,4 +115,43 @@ h1 {
     color: #212121;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.304);
     border: 1px solid black;
+}
+
+.searchbox-ul {
+    list-style-type: none;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    border-radius: 0 0 6px 6px;
+    background-color: #fff;
+    position: absolute;
+    top: 64px;
+    /* border: 1px solid black; */
+    border-top: none;
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    outline: none;
+}
+
+.searchbox-li-item {
+    border-top: 1px solid rgba(0, 0, 0, 0.296);
+    display: flex;
+    align-items: center;
+    color: black;
+    font-family: Raleway;
+    font-size: 19px;
+    padding: 0 24px;
+    height: 44px;
+}
+
+.searchbox-li-item:last-child {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+
+.searchbox-li-item:hover {
+    background-color: rgba(128, 128, 128, 0.085);
+    cursor: pointer;
 }

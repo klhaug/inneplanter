@@ -1,9 +1,13 @@
 .accordion-item {
-    border-top: 1px solid black;
+    border-top: 1px solid rgba(0, 0, 0, 0.316);
   }
 .accordion-item:last-child {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.315);
   }
+
+/* .accordion-item:first-child {
+  border-top: none;
+} */
 
 .accordion-content p {
   margin: 0;
@@ -16,6 +20,7 @@
     padding: 16px 48px;
     cursor: pointer;
     gap: 36px;
+    background-color: rgba(128, 128, 128, 0.058);
   }
 
   .accordion-title span{
@@ -74,6 +79,9 @@
 }
 
 .accordion-plant-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     max-width: 260px;
     min-width: 174px;
     aspect-ratio: 4/5;
@@ -81,7 +89,8 @@
 }
 
 .accordion-plant-image {
-    width: 100%;
+    width: 70%;
+    height: 87.5%;
     object-fit: cover;
     border-radius: 6px;
 }
@@ -115,11 +124,7 @@
     word-break: break-word;
 }
 
-.mobile-card-button {
-    display: none;
     
-}
-
 .mobile-seeless-container {
   display: none;
 }

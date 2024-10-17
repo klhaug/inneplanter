@@ -1,7 +1,19 @@
+@media screen and (max-width: 1014px) {
+    .database-outlet-container .form-container {
+        padding: 0 20px;
+    }
+}
+
+
 @media screen and (max-width: 814px)  {
     .database-header-container {
         flex-direction: column;
         margin-bottom: 32px;
+        gap: 0;
+    }
+
+    .database-search-and-button-container{
+        gap: 0;
     }
 
     .database-add-button {
@@ -13,7 +25,7 @@
 }
 
 
-@media screen and (max-width: 542px) {
+@media screen and (max-width: 745px) {
  .database-wrapper {
     margin: 32px 20px;
  }   

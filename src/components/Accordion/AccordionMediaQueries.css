@@ -7,6 +7,8 @@
 @media screen and (max-width: 815px) {
     .accordion-content {
         flex-direction: column;
+        gap: 0px;
+        height: auto;
     }
 
     .accordion-stats-container p {
@@ -20,7 +22,8 @@
 
 
     .accordion-plant-image-container {
-        max-width: max-content;
+        max-width: 100%;
+
     }
 
     .accordion-beskrivelse-container {
@@ -48,7 +51,7 @@
 
     .mobile-seeless-container {
         display: flex;
-        justify-content: end;
+        justify-content: center;
         margin-top: 12px;
         cursor: pointer;
     }

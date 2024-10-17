@@ -8,6 +8,7 @@
 
 .form-header-container {
     display: flex;
+    flex-direction: column-reverse;
     width: 100%;
 }
 
@@ -18,7 +19,7 @@
 
 .add-form {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     max-width: 700px;
 
 }
@@ -55,11 +56,16 @@
 .input-image-container {
     box-sizing: border-box;
     display: flex;
-    width: 350px;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 61.5px;
+    align-items: end;
+    justify-content: flex-end;
+}
+
+.input-image-container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 8px;
 }
 
 .input-image-button {
@@ -124,6 +130,9 @@
 
 .form-submit-button {
     width: 50%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
     color: #212121;
     align-items: center;
     font-family: Raleway;
@@ -172,6 +181,9 @@
     margin: 0;
     margin-top: 6px;
     color: white;
+    width: 227px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .form-field-wrap .form-field:first-child {
@@ -188,5 +200,9 @@
     border-radius: 6px;
     width: 100%;
     margin-top: 6px;
+}
+
+.mobile-input-image-container {
+    display: none;
 }
 

@@ -14,19 +14,19 @@ function Footer() {
                     <div>
                         <h3>Navigasjon</h3>
                         <ul>
-                            <li><a href="#hjem">Hjem</a></li>
-                            <li><a href="#hjem">Planter</a></li>
-                            <li><a href="#hjem">Om</a></li>
-                            <li><a href="#hjem">Logg inn</a></li>
-                            <li><a href="#hjem">Registrer deg</a></li>
+                            <li><a href="/inneplanter">Hjem</a></li>
+                            <li><a href="./database">Planter</a></li>
+                            <li><a href="/om">Om</a></li>
+                            <li><a href="/logginn">Logg inn</a></li>
+                            <li><a href="/registrer-deg">Registrer deg</a></li>
                         </ul>
                     </div>
                     <div>
                         <h3>Tjenester</h3>
                         <ul>
-                            <li><a href="#database">Tjenester</a></li>
-                            <li><a href="#nyesteplante">Kunnskap</a></li>
-                            <li><a href="#registrerdeg">Nye venner</a></li>
+                            <li><a href="./database">Tjenester</a></li>
+                            <li><a href="/nyesteplante">Kunnskap</a></li>
+                            <li><a href="/registrerdeg">Nye venner</a></li>
                         </ul>
                     </div>
                     <div className="footer-kontakt">

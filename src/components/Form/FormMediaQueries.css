@@ -9,8 +9,42 @@
         min-width: 350px;
     }
 
+    .custom-file-upload {
+        width: 100%;
+    }
+
+    .input-image-container2 {
+        width: 100%;
+    }
+
     .input-image-container {
-        order: -1;
+        width: 100%;
+    }
+
+
+
+
+    .input-image-container {
+        display: none;
+    }
+    .mobile-input-image-container {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: flex-end;
+    }
+
+    .mobile-input-image-container {
+        margin: 0;
+        flex-direction: row;
+        justify-content: center;
+         margin-top: 6px;
+         color: white;
+         width: 100%
+    }
+    .mobile-input-image-container .input-image-container2{
+         width: 227px
     }
 }
 @media screen and (max-width: 585px) {
@@ -28,7 +62,7 @@
     min-width: 50px;
 }
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 464px) {
     .form-container {
         width: 100%;
     }
