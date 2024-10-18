@@ -4,6 +4,8 @@
     margin: auto;
 }
 
+
+
 .error-content-wrapper {
     height: 100%;
     display: flex;
@@ -87,5 +89,9 @@
     .error-back-button {
         width: 100%;
         margin-bottom: 40px;
+    }
+
+    .divider {
+        height: 120px;
     }
 }

@@ -18,6 +18,7 @@ export default function ErrorPage() {
       <div className="error-background">
         <div className="error-content-wrapper">
           <div className="error-content-container">
+            <div className="divider"></div>
             <img className="error-img" src='assets/img4.webp'></img>
             <div className="error-text-container">
               <h1>Ooops... 404</h1>
