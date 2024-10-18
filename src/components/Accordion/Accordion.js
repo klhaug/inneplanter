@@ -68,7 +68,7 @@ const Accordion = ({plantData}) => {
   return (
     <div className="accordion">
       {accordionData.map((item, index) => (
-        <AccordionItem key={index} navn={item.navn} slekt={item.slekt} giftig={item.giftig} vann={item.vann} beskrivelse={item.beskrivelse} bilde={item.imagePath} />
+        <AccordionItem id={item.id} key={index} navn={item.navn} slekt={item.slekt} giftig={item.giftig} vann={item.vann} beskrivelse={item.beskrivelse} bilde={item.imagePath} />
       ))}
     </div>
   );

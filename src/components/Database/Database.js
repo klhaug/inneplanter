@@ -14,15 +14,25 @@ function Database () {
     const plantData = useLoaderData();
     const location = useLocation()
 
-    const {toggleButton, setToggleButton, databaseSearch, setDatabaseSearch} = useDatabaseSearch();
+    const {toggleButton, setToggleButton, databaseSearch, setDatabaseSearch, idSearch, setIdSearch, isOpen, setIsOpen} = useDatabaseSearch();
     
     const handleButtonClick = () => {
         setToggleButton((prev) => !prev); 
       };
 
+    const handleSeeAllButtonClick = () => {
+        setDatabaseSearch('');
+        setIdSearch('');
+        setIsOpen(false)
+    }
+
     // const [databaseSearch, setDatabaseSearch] = useState("")
     const filteredPlants = plantData.filter(plant => {
-        return plant.navn.toLowerCase().includes(databaseSearch.toLowerCase());
+        if (idSearch === "") {
+            return plant.navn.toLowerCase().includes(databaseSearch.toLowerCase());
+        } else {
+            return plant.id.toString().includes(idSearch);
+        }
     })
 
     // console.log(databaseSearch)
@@ -50,7 +60,7 @@ function Database () {
                                 <div className="database-button-container">
                                     {(location.pathname === '/database' || location.pathname === '/database/new-plant-added') && (<button onClick={handleButtonClick} className="database-add-button"><Link to = {`add-plant`}>Legg til</Link></button>)}
                                     {location.pathname === '/database/add-plant' && <button onClick={handleButtonClick} className="database-add-button"><Link to = {``}>Tilbake</Link></button>}
-                                    {databaseSearch.length > 0 ? <button onClick={() => setDatabaseSearch('')} className="hero-add-button">Se alle</button> : null}
+                                    {(databaseSearch.length === 0 && idSearch.length === 0) ? null : <button onClick={handleSeeAllButtonClick} className="hero-add-button">Se alle</button>}
                                 </div>
                             </div>
                     </div>

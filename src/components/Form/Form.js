@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import './FormMediaQueries.css';
 import { useRevalidation } from "../../containers/Revalidate/Revalidate";
 import { useNavigate } from "react-router-dom";
+import { useDatabaseSearch } from "../Database/DatabaseSearchProvider";
+import {v4 as uuidv4} from 'uuid';
 
 
 function Form ({onPlantAdded}) {
@@ -17,6 +19,10 @@ function Form ({onPlantAdded}) {
 
 const revalidate = useRevalidation();
 const navigate = useNavigate();
+const generateUniqueId = () => uuidv4();
+
+const {isOpen, setIsOpen, databaseSearch, setDatabaseSearch } = useDatabaseSearch();
+
 
 const handleImageUpload = (event) => {
   const file = event.target.files[0];
@@ -39,6 +45,7 @@ const formData = new FormData();
   formData.append('giftig', giftig);
   formData.append('beskrivelse', info);
   formData.append('bilde', selectedFile);
+  formData.append('id', generateUniqueId())
 
 
 
@@ -53,6 +60,8 @@ const handleSubmit = (event) => {
         .then(data => console.log(data))
         .then(onPlantAdded)
         .then(() => revalidate())
+        .then(() => setDatabaseSearch(''))
+        .then(() => setIsOpen(false))
         .then(() => navigate('/database/new-plant-added'))
   } else {
     alert('Please enter information')

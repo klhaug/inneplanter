@@ -8,14 +8,15 @@ import { useNavigate } from "react-router-dom";
 
 function Card ({plantData}) {
     const latestPlantData = plantData.at(-1)
-    const {navn, slekt, vann, giftig, beskrivelse, imagePath} = latestPlantData;
-    const {isOpen, setIsOpen, databaseSearch, setDatabaseSearch} = useDatabaseSearch();
+    const {navn, slekt, vann, giftig, beskrivelse, imagePath, id} = latestPlantData;
+    const {isOpen, setIsOpen, databaseSearch, setDatabaseSearch, idSearch, setIdSearch} = useDatabaseSearch();
     
     const navigate = useNavigate();
 
     const handleButtonClick = () => {
         setDatabaseSearch(navn)
-        setIsOpen(!isOpen)
+        setIsOpen(true)
+        setIdSearch(id)
         navigate('/database')
     }
 

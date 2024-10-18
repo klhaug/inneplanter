@@ -9,7 +9,7 @@ import { useDatabaseSearch } from "../Database/DatabaseSearchProvider";
 function Hero ({onButtonClick, plantData}) {
     const [searchQuery, setSearchQuery] = useState('');
     const [filteredPlants, setFilteredPlants] = useState([]);
-    const {databaseSearch, setDatabaseSearch} = useDatabaseSearch();
+    const {isOpen, setIsOpen, databaseSearch, setDatabaseSearch} = useDatabaseSearch();
 
     const handleInputChange = (event) => {
         const query = event.target.value;
@@ -34,6 +34,11 @@ function Hero ({onButtonClick, plantData}) {
       setFilteredPlants([]); // Hide the suggestions
       
     };
+
+    const handleSeeAllClick = () => {
+        setDatabaseSearch('')
+        setIsOpen(false)
+    }
 
    
 
@@ -68,7 +73,7 @@ function Hero ({onButtonClick, plantData}) {
                         <div className="hero-button-container">
                            { searchQuery.length === 0 ? <Link className="hero-add-button" to = {`add-plant`}>Legg til</Link> :
                             <Link className="hero-add-button" to = {`database`}>Søk</Link>}
-                            <Link onClick={() => setDatabaseSearch('')} className="hero-database-button" to ={`database`}>Se alle</Link>
+                            <Link onClick={handleSeeAllClick } className="hero-database-button" to ={`database`}>Se alle</Link>
                         </div>
                     </div>
                 </div>

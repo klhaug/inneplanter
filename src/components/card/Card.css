@@ -6,7 +6,7 @@
     padding: 24px 48px;
     margin: 16px 0;
     max-width: 1085px;
-    height: auto;
+    height: fit-content;
     background-color: white;
     border-radius: 6px;
     box-shadow: 0 0 16px #2e384d11;
