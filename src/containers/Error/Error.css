@@ -42,6 +42,7 @@
 .error-img {
     max-width: 478px ;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.11);
+    margin-top: 40px;
 }
 
 .error-back-button {
@@ -70,7 +71,7 @@
     .error-content-container {
         flex-direction: column;
         width: fit-content;
-        margin: 20px;
+        margin: 40px 20px;
     }
     .error-img {
         width: 100%;
@@ -85,5 +86,6 @@
 @media screen and (max-width: 550px) {
     .error-back-button {
         width: 100%;
+        margin-bottom: 40px;
     }
 }
