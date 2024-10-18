@@ -14,9 +14,8 @@ function Database () {
     const plantData = useLoaderData();
     const location = useLocation()
 
-    const { databaseSearch, setDatabaseSearch} = useDatabaseSearch();
-
-    const [toggleButton, setToggleButton] = useState(true)
+    const {toggleButton, setToggleButton, databaseSearch, setDatabaseSearch} = useDatabaseSearch();
+    
     const handleButtonClick = () => {
         setToggleButton((prev) => !prev); 
       };

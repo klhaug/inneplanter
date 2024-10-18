@@ -26,16 +26,12 @@
 
     .plant-image-container {
         order: -1;
-        max-width: 310px;
-        max-height: none;
-        aspect-ratio: 310/225;
-        border-radius: 6px 6px 0px 0px;
+        max-width: 80%;
+
     }
 
     .plant-image {
-        overflow: hidden;
-        height: 225px;
-        border-radius: 6px 6px 0px 0px;
+        width: 100%;
 
 
     }

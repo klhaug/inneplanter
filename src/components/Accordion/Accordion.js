@@ -1,12 +1,20 @@
 import React, { useState } from "react";
 import './Accordion.css'
 import './AccordionMediaQueries.css'
+import { useDatabaseSearch } from "../Database/DatabaseSearchProvider";
 
 const AccordionItem = ({ navn, slekt, vann, giftig, beskrivelse, bilde }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
+  const {isOpen, setIsOpen} = useDatabaseSearch();
+  const [localIsOpen, setLocalIsOpen] = useState(false)
 
   const toggleAccordion = () => {
-    setIsOpen(!isOpen);
+    if (isOpen === true || localIsOpen === true) {
+      setIsOpen(false);
+      setLocalIsOpen(false)
+    } else {
+      setLocalIsOpen(true)
+    }
   };
 
   return (
@@ -18,7 +26,7 @@ const AccordionItem = ({ navn, slekt, vann, giftig, beskrivelse, bilde }) => {
         <h3>Giftig: {giftig}</h3>
         <span>{isOpen ? "-" : "+"}</span>
       </div>}
-      {isOpen && <div className="accordion-content">
+      {(isOpen || localIsOpen) &&  <div className="accordion-content">
         <div className="accordion-text-container">
           <h3>{navn}</h3>
           <div className="accordion-stats-container"> 

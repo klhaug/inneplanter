@@ -1,11 +1,23 @@
 import React from "react";
 import './Card.css'
 import './CardMediaQueries.css'
+import { useDatabaseSearch } from "../Database/DatabaseSearchProvider";
+import { useNavigate } from "react-router-dom";
+
 
 
 function Card ({plantData}) {
     const latestPlantData = plantData.at(-1)
     const {navn, slekt, vann, giftig, beskrivelse, imagePath} = latestPlantData;
+    const {isOpen, setIsOpen, databaseSearch, setDatabaseSearch} = useDatabaseSearch();
+    
+    const navigate = useNavigate();
+
+    const handleButtonClick = () => {
+        setDatabaseSearch(navn)
+        setIsOpen(!isOpen)
+        navigate('/database')
+    }
 
     return (
         <div className="card-container">
@@ -32,7 +44,7 @@ function Card ({plantData}) {
             <div className="plant-image-container">
                 <img className="plant-image" src={`http://localhost:3000/${imagePath}`} alt="a plant"/>
             </div>
-            <button className="mobile-card-button">Les mer</button>
+            <button onClick={handleButtonClick} className="mobile-card-button">Les mer</button>
         </div>
     )
 }
