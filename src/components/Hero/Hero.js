@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import './Hero.css'
 import './HeroMediaQueries.css'
+import { useNavigate } from "react-router-dom";
 import { useDatabaseSearch } from "../Database/DatabaseSearchProvider";
 
 
@@ -9,12 +10,31 @@ import { useDatabaseSearch } from "../Database/DatabaseSearchProvider";
 function Hero ({onButtonClick, plantData}) {
     const [searchQuery, setSearchQuery] = useState('');
     const [filteredPlants, setFilteredPlants] = useState([]);
-    const {isOpen, setIsOpen, databaseSearch, setDatabaseSearch} = useDatabaseSearch();
+    const {isOpen, setIsOpen, databaseSearch, setDatabaseSearch, idSearch, setIdSearch} = useDatabaseSearch();
+
+    const navigate = useNavigate();
+    
+
+    const handleButtonClick = () => {
+        const filtered = plantData.filter(plant =>
+            plant.navn.toLowerCase().includes(searchQuery.toLowerCase())
+          )
+          if (filtered.length !== 0) {
+            console.log(filtered)
+            setIsOpen(true)
+            navigate('/inneplanter/database')
+        } else {
+            alert ('Vi har dessverre ikke den planten i vår database')
+        }
+        
+    }
 
     const handleInputChange = (event) => {
         const query = event.target.value;
         setDatabaseSearch(query);
         setSearchQuery(query);  
+
+        
 
     if (query.length > 0) {
         const filtered = plantData.filter(plant =>
@@ -26,11 +46,14 @@ function Hero ({onButtonClick, plantData}) {
       }
       
     };
+
+ 
   
     // Handle when a suggestion is clicked
-    const handleSuggestionClick = (plantName) => {
-      setSearchQuery(plantName);
-      setDatabaseSearch(plantName) // Set the clicked suggestion to the search box
+    const handleSuggestionClick = (plant) => {
+      setSearchQuery(plant.navn);
+      setDatabaseSearch(plant.navn);
+      setIdSearch(plant.id) // Set the clicked suggestion to the search box
       setFilteredPlants([]); // Hide the suggestions
       
     };
@@ -63,7 +86,7 @@ function Hero ({onButtonClick, plantData}) {
                                     {filteredPlants.map((plant, index) => (
                                         <li className="searchbox-li-item"
                                         key={index}
-                                        onClick={() => handleSuggestionClick(plant.navn)}
+                                        onClick={() => handleSuggestionClick(plant)}
                                         >
                                         {plant.navn}
                                         </li>
@@ -72,8 +95,8 @@ function Hero ({onButtonClick, plantData}) {
                                 )}
                         <div className="hero-button-container">
                            { searchQuery.length === 0 ? <Link className="hero-add-button" to = {`add-plant`}>Legg til</Link> :
-                            <Link className="hero-add-button" to = {`database`}>Søk</Link>}
-                            <Link onClick={handleSeeAllClick } className="hero-database-button" to ={`database`}>Se alle</Link>
+                            <button onClick= {handleButtonClick} className="hero-add-button" >Søk</button>}
+                            <Link onClick= {handleSeeAllClick} className="hero-database-button" to ={`database`}>Se alle</Link>
                         </div>
                     </div>
                 </div>

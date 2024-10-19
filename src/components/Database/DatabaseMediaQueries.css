@@ -2,6 +2,16 @@
     .database-outlet-container .form-container {
         padding: 0 20px;
     }
+
+    .database-add-button {
+        display: none;
+    }
+    .mobile-database-button-container {
+        display: flex;
+    }
+    .close-button-container {
+        display: inline;
+    }
 }
 
 
@@ -16,12 +26,7 @@
         gap: 0;
     }
 
-    .database-add-button {
-        display: none;
-    }
-    .mobile-database-button-container {
-        display: flex;
-    }
+  
 }
 
 

@@ -14,7 +14,8 @@ function Database () {
     const plantData = useLoaderData();
     const location = useLocation()
 
-    const {toggleButton, setToggleButton, databaseSearch, setDatabaseSearch, idSearch, setIdSearch, isOpen, setIsOpen} = useDatabaseSearch();
+    const {databaseSearch, setDatabaseSearch, idSearch, setIdSearch, isOpen, setIsOpen} = useDatabaseSearch();
+    const [toggleButton, setToggleButton] = useState(true)
     
     const handleButtonClick = () => {
         setToggleButton((prev) => !prev); 
@@ -47,7 +48,8 @@ function Database () {
                     <Card plantData={plantData} />
                 </div>
             </div>}
-            {location.pathname === '/database/add-plant' && <div className="database-outlet-container">
+            {location.pathname === '/inneplanter/database/add-plant' && <div className="database-outlet-container">
+                        <div className="close-button-container"><button onClick={handleButtonClick} className="close-outlet-button"><Link to = {``}>Lukk ▾</Link></button></div>
                         <Outlet/>
                     </div>}
                 <div className="database-content-container">
@@ -58,8 +60,8 @@ function Database () {
                                     <input value={databaseSearch} onChange={(e) => setDatabaseSearch(e.target.value)} type="search" className="database-search" placeholder="Søk etter plante"/>
                                 </div>
                                 <div className="database-button-container">
-                                    {(location.pathname === '/database' || location.pathname === '/database/new-plant-added') && (<button onClick={handleButtonClick} className="database-add-button"><Link to = {`add-plant`}>Legg til</Link></button>)}
-                                    {location.pathname === '/database/add-plant' && <button onClick={handleButtonClick} className="database-add-button"><Link to = {``}>Tilbake</Link></button>}
+                                    {(location.pathname === '/inneplanter/database' || location.pathname === '/inneplanter/database/new-plant-added') && (<button onClick={handleButtonClick} className="database-add-button"><Link to = {`add-plant`}>Legg til</Link></button>)}
+                                    {location.pathname === '/inneplanter/database/add-plant' && <button onClick={handleButtonClick} className="database-add-button"><Link to = {``}>Tilbake</Link></button>}
                                     {(databaseSearch.length === 0 && idSearch.length === 0) ? null : <button onClick={handleSeeAllButtonClick} className="hero-add-button">Se alle</button>}
                                 </div>
                             </div>
@@ -68,7 +70,7 @@ function Database () {
                         <Accordion plantData = {filteredPlants}/>
                     </div>
                     <div className="mobile-database-button-container">
-                        {toggleButton && <button onClick={handleButtonClick} className="mobile-database-add-button"><Link to = {`add-plant`}>+</Link></button>}
+                        {location.pathname === '/inneplanter/database' && <button onClick={handleButtonClick} className="mobile-database-add-button"><Link to = {`add-plant`}>+</Link></button>}
                     </div>
                 </div>
             </div>

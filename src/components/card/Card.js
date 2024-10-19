@@ -17,7 +17,7 @@ function Card ({plantData}) {
         setDatabaseSearch(navn)
         setIsOpen(true)
         setIdSearch(id)
-        navigate('/database')
+        navigate('/inneplanter/database')
     }
 
     return (

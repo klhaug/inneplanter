@@ -9,10 +9,10 @@ function Navbar({onButtonClick}) {
 
                 <nav className="navbar">
                     <div className="logo-container">
-                      <Link to ={`/`}>Inneplanter</Link>
+                      <Link to ={`/inneplanter`}>Inneplanter</Link>
                     </div>
                     <ul className="nav-right-container">
-                        <li><Link to ={`/`}>Hjem</Link></li>
+                        <li><Link to ={`/inneplanter`}>Hjem</Link></li>
                         <li><Link to ={`database`}>Planter</Link></li>
                     </ul>
                 </nav>

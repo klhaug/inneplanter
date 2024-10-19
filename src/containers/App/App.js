@@ -17,7 +17,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/inneplanter',
     element: <Applayout />,
     errorElement: <ErrorPage />,
     children: [

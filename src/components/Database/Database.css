@@ -43,6 +43,7 @@
 
 .database-add-button {
     flex: 1;
+    margin-left: 32px;
     text-wrap: nowrap;
     color: white;
     align-items: center;
@@ -78,7 +79,6 @@
 
 .database-search-and-button-container {
     flex: 1;
-    gap: 32px;
     display: flex;
     justify-content: space-between;
 }
@@ -100,6 +100,7 @@
 .database-header-container .hero-add-button {
     border: 1px solid black;
     text-wrap: nowrap;
+    margin-left: 16px;
 }
 
 .database-add-button:hover {
@@ -153,5 +154,30 @@
 
 .database-outlet-container h1 {
     color: white
+}
+
+.database-outlet-container {
+    position: relative;
+
+}
+
+.close-button-container {
+    display: none;
+    margin: auto;
+    max-width: 1200px;
+}
+
+.close-outlet-button {
+    color: black;
+    top: 20px;
+    right: 20px;
+    align-items: center;
+    font-family: Raleway;
+    font-size: 19px;
+    font-weight: 400;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 50px;
+    cursor: pointer;
 }
 
