@@ -181,3 +181,10 @@
     cursor: pointer;
 }
 
+.close-button-container2 {
+    display: inline-block;
+    text-align: end;
+    margin: auto;
+    max-width: 1200px;
+}
+

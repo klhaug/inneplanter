@@ -15,6 +15,13 @@ import Applayout from '../Applayout/Applayout';
 import { Children, useEffect, useState } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
+
+//SET UP SERVER SIDE IMAGE RENDERING
+//SENDING THE IMAGE TO GOOGLE CLOUD
+
+
+
+
 const router = createBrowserRouter([
   {
     path: '/inneplanter',

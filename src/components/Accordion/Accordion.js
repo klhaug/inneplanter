@@ -24,7 +24,7 @@ const AccordionItem = ({ navn, slekt, vann, giftig, beskrivelse, bilde }) => {
         <h3>{slekt}</h3>
         <h3>{vann}</h3>
         <h3>Giftig: {giftig}</h3>
-        <span>{isOpen ? "-" : "+"}</span>
+        <span>{localIsOpen ? "-" : "+"}</span>
       </div>}
       {(isOpen || localIsOpen) &&  <div className="accordion-content">
         <div className="accordion-text-container">

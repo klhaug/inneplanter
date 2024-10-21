@@ -3,14 +3,20 @@ import Card from "../card/Card";
 import './Section3.css';
 import './Section3MediaQueries.css'
 import { useNavigate } from "react-router-dom";
+import { useDatabaseSearch } from "../Database/DatabaseSearchProvider";
 
 
 function Section3({plantData}) {
+
+const {isOpen, setIsOpen, databaseSearch, setDatabaseSearch, idSearch, setIdSearch} = useDatabaseSearch();
 
 const navigate = useNavigate();
 
 const handleButtonClick = (route) => {
     navigate(route)
+    setIdSearch('')
+    setDatabaseSearch('')
+    setIsOpen (false)
 }
 
     return(

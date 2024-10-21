@@ -22,7 +22,7 @@ export default function ErrorPage() {
             <img className="error-img" src='assets/img4.webp'></img>
             <div className="error-text-container">
               <h1>Ooops... 404</h1>
-              <p>Enten har du navigert til en side/funksjon som ikke eksisterer enda, eller så har det skjedd noe grådig feil fra vår sin side. Uansett så beklager vi på det aller sterkeste. Her har du en skikkelig real <b>“tilbake”-knapp</b> som tar deg trygt tilbake til startsiden. Kom gjerne tilbake ved senere anledning og sjekk om vi har gjort jobben vår og ryddet opp i dette. Ha en strålende dag videre!</p>
+              <p>Enten har du navigert til en side/funksjon som ikke eksisterer enda, eller så har det skjedd noe grådig feil fra vår sin side. Uansett så beklager vi på det aller sterkeste. Her har du en skikkelig real <b>“tilbake”-knapp</b> som tar deg trygt tilbake til startsiden. Kom gjerne tilbake ved en senere anledning og sjekk om vi har gjort jobben vår og ryddet opp i dette. Ha en strålende dag videre!</p>
               <button onClick={() => handleButtonClick('/inneplanter')} className="error-back-button">← TILBAKE</button>
             </div>
           </div>

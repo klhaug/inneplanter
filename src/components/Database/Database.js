@@ -42,10 +42,11 @@ function Database () {
         <div>
         <div className="database-background">
             <div className="database-wrapper">
-            {location.pathname === '/database/new-plant-added' && <div className="database-card-container">
+            {location.pathname === '/inneplanter/database/new-plant-added' && <div className="database-card-container">
                 <div className="database-card-text-container">
                     <h1>Takk for ditt bidrag!</h1>
                     <Card plantData={plantData} />
+                    <div className="close-button-container2"><button onClick={handleButtonClick} className="close-outlet-button"><Link to = {``}>Lukk ▾ </Link></button></div>
                 </div>
             </div>}
             {location.pathname === '/inneplanter/database/add-plant' && <div className="database-outlet-container">
