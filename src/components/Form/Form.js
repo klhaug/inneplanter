@@ -51,8 +51,10 @@ const formData = new FormData();
 
 const handleSubmit = (event) => {
   event.preventDefault();
+  // LAG EN BEDRE IF HER
   if (navn.length > 0) {
-        fetch('http://localhost:3000/submit', {
+    //SKAL EGENTLIG VÆRE SUBMIT
+        fetch('http://localhost:3000/upload',  {
             method: 'post',
             body: formData
           })
