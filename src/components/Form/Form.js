@@ -53,7 +53,6 @@ const handleSubmit = (event) => {
   event.preventDefault();
   // LAG EN BEDRE IF HER
   if (navn.length > 0) {
-    //SKAL EGENTLIG VÆRE SUBMIT
         fetch('http://localhost:3000/upload',  {
             method: 'post',
             body: formData
@@ -137,7 +136,7 @@ const handleChange = (event) => {
                         type="file" 
                         id="file-upload" 
                         name="uploaded_file" 
-                        accept="image/png, image/jpeg" 
+                        accept="image/png, image/jpeg, image/webp" 
                         onChange={handleImageUpload}
                         />
                     <p>Knips et nytt bilde, eller last opp et ekstrabilde</p>

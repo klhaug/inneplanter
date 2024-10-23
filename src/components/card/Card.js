@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 
 function Card ({plantData}) {
     const latestPlantData = plantData.at(-1)
-    const {navn, slekt, vann, giftig, beskrivelse, imagePath, id} = latestPlantData;
+    const {navn, slekt, vann, giftig, beskrivelse, imagepath, id} = latestPlantData;
     const {isOpen, setIsOpen, databaseSearch, setDatabaseSearch, idSearch, setIdSearch} = useDatabaseSearch();
     
     const navigate = useNavigate();
@@ -35,7 +35,7 @@ function Card ({plantData}) {
                     </div>
                     <div className="giftig-container">
                         <p>Giftig:</p>
-                        <p className="giftig">{giftig}</p>
+                        <p className="giftig">{giftig === true ? "Ja" : "Nei"}</p>
                     </div>
                 </div>
                 <div className="beskrivelse-container">
@@ -43,7 +43,7 @@ function Card ({plantData}) {
                 </div>
             </div>
             <div className="plant-image-container">
-                <img className="plant-image" src={`http://localhost:3000/${imagePath}`} alt="a plant"/>
+                <img className="plant-image" src={imagepath} alt="a plant"/>
             </div>
             <button onClick={handleButtonClick} className="mobile-card-button">Les mer</button>
         </div>
