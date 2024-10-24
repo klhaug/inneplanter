@@ -64,6 +64,7 @@ const handleSubmit = (event) => {
         .then(() => setDatabaseSearch(''))
         .then(() => setIsOpen(false))
         .then(() => navigate('/inneplanter/database/new-plant-added'))
+        .then(() => revalidate())
   } else {
     alert('Please enter information')
   }
