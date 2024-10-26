@@ -3,8 +3,8 @@ import './Accordion.css'
 import './AccordionMediaQueries.css'
 import { useDatabaseSearch } from "../Database/DatabaseSearchProvider";
 
-const AccordionItem = ({ navn, slekt, vann, giftig, beskrivelse, bilde }) => {
-  // const [isOpen, setIsOpen] = useState(false);
+  const AccordionItem = ({ navn, slekt, vann, giftig, beskrivelse, bilde }) => {
+
   const {isOpen, setIsOpen} = useDatabaseSearch();
   const [localIsOpen, setLocalIsOpen] = useState(false)
 
@@ -14,6 +14,7 @@ const AccordionItem = ({ navn, slekt, vann, giftig, beskrivelse, bilde }) => {
       setLocalIsOpen(false)
     } else {
       setLocalIsOpen(true)
+      setIsOpen(true)
     }
   };
 

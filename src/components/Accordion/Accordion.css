@@ -17,10 +17,9 @@
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 1fr 1.25fr 0.75fr 0.5fr;
-    padding: 16px 48px;
+    padding: 21px 48px;
     cursor: pointer;
     gap: 36px;
-    background-color: rgba(128, 128, 128, 0.058);
   }
 
   .accordion-title span{

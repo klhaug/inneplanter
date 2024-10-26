@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 
 function Card () {
-const {isOpen, setIsOpen, databaseSearch, setDatabaseSearch, idSearch, setIdSearch} = useDatabaseSearch();
+const {setIsOpen, setDatabaseSearch, setIdSearch} = useDatabaseSearch();
 const [latestPlantData, setLatestPlantData] = useState(null)
 const [loading, setLoading] = useState(true)
 

@@ -27,7 +27,6 @@ function Database () {
         setIsOpen(false)
     }
 
-    // const [databaseSearch, setDatabaseSearch] = useState("")
     const filteredPlants = plantData.filter(plant => {
         if (idSearch === "") {
             return plant.navn.toLowerCase().includes(databaseSearch.toLowerCase());
@@ -36,7 +35,12 @@ function Database () {
         }
     })
 
-    // console.log(databaseSearch)
+    if (databaseSearch === "") {
+        setIdSearch('')
+        setIsOpen(false)
+    };
+
+
 
     return(
         <div>

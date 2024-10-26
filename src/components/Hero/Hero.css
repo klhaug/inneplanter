@@ -120,6 +120,8 @@ h1 {
 .searchbox-ul {
     list-style-type: none;
     box-sizing: border-box;
+    max-height: 404px;
+    overflow-y: scroll;
     padding: 0;
     margin: 0;
     width: 100%;
