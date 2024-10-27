@@ -54,8 +54,9 @@ const handleSubmit = (event) => {
   // LAG EN BEDRE IF HER
   if (navn.length > 0) {
         fetch('https://inneplanter-96dc16623a17.herokuapp.com/upload',  {
-            method: 'post',
-            body: formData
+            method: 'POST',
+            body: formData,
+            credentials: 'include',
           })
         .then(response => response.json())
         .then(data => console.log(data))
