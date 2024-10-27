@@ -32,6 +32,7 @@ const router = createBrowserRouter([
         element: <Home />,
         loader: async () => {
           const response = await fetch ("https://inneplanter-96dc16623a17.herokuapp.com/plantdatabase", {
+            credentials: "include",
           })
           return response.json();
         },
