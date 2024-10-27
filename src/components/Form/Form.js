@@ -53,7 +53,7 @@ const handleSubmit = (event) => {
   event.preventDefault();
   // LAG EN BEDRE IF HER
   if (navn.length > 0) {
-        fetch('http://localhost:3000/upload',  {
+        fetch('https://inneplanter-96dc16623a17.herokuapp.com/upload',  {
             method: 'post',
             body: formData
           })

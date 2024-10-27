@@ -16,7 +16,7 @@ const [loading, setLoading] = useState(true)
     useEffect (() => {
         async function getPlantData() {
             try {
-              const response = await fetch("http://localhost:3000/plantdatabase");
+              const response = await fetch("https://inneplanter-96dc16623a17.herokuapp.com/plantdatabase");
               if (!response.ok) {
                 throw new Error('Network response was not ok');
               }

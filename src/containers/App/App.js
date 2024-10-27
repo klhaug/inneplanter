@@ -16,8 +16,7 @@ import { Children, useEffect, useState } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 
-//SET UP SERVER SIDE IMAGE RENDERING
-//SENDING THE IMAGE TO GOOGLE CLOUD
+
 
 
 
@@ -32,7 +31,8 @@ const router = createBrowserRouter([
         index: true,
         element: <Home />,
         loader: async () => {
-          const response = await fetch ("http://localhost:3000/plantdatabase")
+          const response = await fetch ("https://inneplanter-96dc16623a17.herokuapp.com/plantdatabase", {
+          })
           return response.json();
         },
       },
@@ -44,7 +44,7 @@ const router = createBrowserRouter([
         path: 'database',
         element: <Database />,
         loader: async () => {
-          const response = await fetch ("http://localhost:3000/plantdatabase")
+          const response = await fetch ("https://inneplanter-96dc16623a17.herokuapp.com/plantdatabase")
           return response.json();
         },
         errorElement: <ErrorPage />,
@@ -67,55 +67,40 @@ const router = createBrowserRouter([
 
 
 function App() {
-const [latestPlantData, setLatestPlantdata] = useState([])
-const [plantData, setPlantData] = useState([])
-const [route, setRoute] = useState('home')
-const [fetchTrigger, setFetchTrigger] = useState(false);
-const onButtonClick = (route) => {
-  setRoute(route)
-}
+// const [latestPlantData, setLatestPlantdata] = useState([])
+// const [plantData, setPlantData] = useState([])
+// const [route, setRoute] = useState('home')
+// const [fetchTrigger, setFetchTrigger] = useState(false);
+// const onButtonClick = (route) => {
+//   setRoute(route)
+// }
 
-useEffect(() => {
-    fetch('http://localhost:3000/')
-      .then(response => response.json())
-      .then(plant => setLatestPlantdata(plant))
-  }, [fetchTrigger])
+// useEffect(() => {
+//     fetch('http://localhost:3000/')
+//       .then(response => response.json())
+//       .then(plant => setLatestPlantdata(plant))
+//   }, [fetchTrigger])
 
-  const handlePlantAdded = () => {
-    setFetchTrigger((prev) => !prev); 
-  };
+  // const handlePlantAdded = () => {
+  //   setFetchTrigger((prev) => !prev); 
+  // };
 
-useEffect(() => {
-  fetch("http://localhost:3000/plantdatabase")
-    .then(response => response.json())
-    .then(data => setPlantData(data))
-}, [fetchTrigger])
+// useEffect(() => {
+//   fetch("http://localhost:3000/plantdatabase")
+//     .then(response => response.json())
+//     .then(data => setPlantData(data))
+// }, [fetchTrigger])
 
 
-  console.log(fetchTrigger)
-  console.log(latestPlantData)
-  console.log(route)
-  console.log(plantData)
+  // console.log(fetchTrigger)
+  // console.log(latestPlantData)
+  // console.log(route)
+  // console.log(plantData)
 
 
   return (
     <div className="App">
       <RouterProvider router={router}/>
-      {/* <header className="App-header">
-        <Navbar onButtonClick = {onButtonClick} />
-      </header>
-      <div className="hero-wrapper"> 
-        {route === 'home' ?
-        <Hero plantData = {plantData} onButtonClick = {onButtonClick}/> 
-        :
-        <Form onPlantAdded={handlePlantAdded}/>
-        }
-      </div>
-        <Section2 />
-        <Section3 plantData = {latestPlantData} />
-        <Database plantData = {plantData}/>
-        <Footer />
-        <FooterBottom /> */}
     </div>
   );
 }
