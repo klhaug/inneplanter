@@ -31,7 +31,7 @@ const router = createBrowserRouter([
         index: true,
         element: <Home />,
         loader: async () => {
-          const response = await fetch ("https://cors-anywhere.inneplanter-96dc16623a17.herokuapp.com/plantdatabase", {
+          const response = await fetch ("https://inneplanter-96dc16623a17.herokuapp.com/plantdatabase", {
             credentials: "include",
           })
           return response.json();
