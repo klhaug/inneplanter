@@ -56,7 +56,8 @@ const handleSubmit = (event) => {
         fetch('https://inneplanter-96dc16623a17.herokuapp.com/upload', {
             method: 'POST',
             body: formData,
-            credentials: 'include'
+            credentials: 'include',
+            mode: 'cors'
           })
         .then(response => response.json())
         .then(data => console.log(data))
