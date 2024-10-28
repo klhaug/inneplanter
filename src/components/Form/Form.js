@@ -57,7 +57,7 @@ const handleSubmit = (event) => {
             method: 'POST',
             body: formData,
             credentials: 'include',
-            mode: 'cors'
+            mode: 'no-cors'
           })
         .then(response => response.json())
         .then(data => console.log(data))
