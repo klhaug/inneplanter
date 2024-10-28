@@ -58,7 +58,7 @@ const handleSubmit = (event) => {
             body: formData,
             credentials: 'include',
             mode: 'cors'
-          })
+          });
         .then(response => response.json())
         .then(data => console.log(data))
         .then(onPlantAdded)
