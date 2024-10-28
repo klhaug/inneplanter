@@ -57,7 +57,7 @@ const handleSubmit = (event) => {
             method: 'POST',
             body: formData,
             credentials: 'include',
-            mode: 'no-cors'
+            mode: 'cors'
           })
         .then(response => response.json())
         .then(data => console.log(data))
@@ -70,7 +70,7 @@ const handleSubmit = (event) => {
   } else {
     alert('Please enter information')
   }
-}
+};
 
 const handleChange = (event) => {
     event.target.blur()
