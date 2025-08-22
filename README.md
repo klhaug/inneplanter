@@ -13,3 +13,4 @@ My first "fullstack"-app I've ever built. It was meant as a way for my fiancèe 
 
   Readme updated 26.04.25... 
 
+<img width="1715" height="3922" alt="Frame 50" src="https://github.com/user-attachments/assets/2ec44391-2ce1-4733-9be5-f267dbd7383f" />
